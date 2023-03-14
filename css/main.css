@@ -1,0 +1,328 @@
+@charset "UTF-8";
+/*Обнуление*/
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/*--------------------*/
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/*---- Шапка ----*/
+.header {
+  background: rgb(247, 169, 80);
+  width: 100%;
+  height: 80px;
+  color: rgb(21, 1, 22);
+}
+.header a {
+  text-decoration: none;
+  transition: all 0.5s ease;
+  color: rgb(21, 1, 22);
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.header__logo {
+  flex: 0 1 10%;
+  font-size: 40px;
+}
+.header__navigation {
+  flex: 0 1 30%;
+}
+.header__login {
+  flex: 0 1 5%;
+}
+.header__login-link:hover {
+  color: rgb(250, 250, 250);
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation__item a:hover {
+  color: rgb(250, 250, 250);
+}
+
+/*---- Шапка ----*/
+.second-title {
+  font-size: 1.3rem;
+}
+
+/*---- главный экран ----*/
+.first-window {
+  padding-top: 4em;
+}
+.first-window__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-window__offer {
+  flex: 0 1 40%;
+}
+.first-window__title {
+  font-size: 2.5rem;
+}
+.first-window__subtitle {
+  font-size: 1.2rem;
+}
+.first-window__button {
+  display: block;
+  background: rgb(247, 169, 80);
+  text-decoration: none;
+  color: #000;
+  margin-top: 10px;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transition: bacground 0.5s ease;
+}
+.first-window__button:hover {
+  background: rgb(221, 126, 18);
+  color: aliceblue;
+}
+.first-window__img {
+  flex: 0 1 50%;
+}
+
+/*---- главный экран ----*/
+/*---- Slider ----*/
+/*---- Slider ----*/
+.wrapper {
+  padding-top: 2em;
+  display: flex;
+}
+
+.filters {
+  width: 20%;
+  padding: 0 1.2em;
+}
+.filters__clear-button {
+  width: 100%;
+  border: 1px solid #8b8b8b;
+  padding: 0.5em 0;
+}
+.filters__price-filter {
+  padding-top: 1em;
+  margin-bottom: 0.5em;
+}
+.filters__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+}
+.filters__icon {
+  width: 20px;
+  transform: rotate(-90deg);
+  transition: all 2s ease;
+}
+.filters__icon.active {
+  transform: rotate(-180deg);
+}
+.filters__title {
+  font-size: 18px;
+}
+.filters__body {
+  display: none;
+  transition: all 0.5s ease;
+}
+.filters__body.active {
+  display: block;
+}
+.filters__body p {
+  margin-bottom: 0.5em;
+}
+.filters__body p:last-child {
+  margin: 0;
+}
+.filters__filter {
+  margin-bottom: 0.5em;
+}
+.filters__filter :last-child {
+  margin: 0;
+}
+.input {
+  width: 100%;
+  border: 1px solid #8b8b8b;
+  padding: 0.3em 0.5em;
+}
+
+.catalog {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.catalog__cart {
+  flex: 0 1 30%;
+  margin-bottom: 2em;
+}
+.catalog__cart:last-child {
+  margin: 0;
+}
+
+.cart {
+  padding: 1em;
+  border: 1px solid #8b8b8b;
+}
+.cart__img {
+  width: 100%;
+}
+.cart__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cart__body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1em;
+}
+.cart__title {
+  font-size: 18px;
+  font-weight: normal;
+}
+.cart__availability {
+  padding: 0.1em 0.6em;
+  color: aliceblue;
+  background: rgb(3, 156, 3);
+}
+.cart__price {
+  font-weight: 900;
+  font-size: 20px;
+}
+.cart__button {
+  color: #000;
+  text-decoration: none;
+  border: 1px solid #8b8b8b;
+  padding: 0.3em 1em;
+  transition: all 0.4s ease;
+}
+.cart__button:hover {
+  background: rgb(247, 169, 80);
+  color: aliceblue;
+}
+
+/*---- Контакты ----*/
+.contacts-wrapper {
+  padding-top: 1em;
+  display: flex;
+}
+
+.contacts-title {
+  padding-top: 1em;
+  font-size: 32px;
+}
+
+.contacts__wrapper {
+  margin-left: 2em;
+}
+.contacts__item {
+  margin-bottom: 1.5em;
+}
+.contacts__item:last-child {
+  margin: 0;
+}
+.contacts__text {
+  color: #575757;
+  text-decoration: none;
+}
+.contacts__title {
+  font-size: 18px;
+}
+
+/*---- Контакты ----*/

@@ -1,0 +1,261 @@
+// Обнуляющие стили для css
+@import '_nullstyle';
+
+
+$primary-color: rgb(247, 169, 80);
+$second-color: rgb(56, 159, 207);
+$text-color: rgb(21, 1, 22);
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+// Шапка сайта
+@import '_header';
+
+.second-title {
+  font-size: 1.3rem;
+}
+
+/*---- главный экран ----*/
+
+.first-window {
+  padding-top: 4em;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__offer {
+    flex: 0 1 40%;
+  }
+
+  &__title {
+    font-size: 2.5rem;
+  }
+
+  &__subtitle {
+    font-size: 1.2rem;
+  }
+
+  &__button {    
+    display: block;    
+    background: $primary-color;
+    text-decoration: none;
+    color: #000;      
+    margin-top: 10px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    transition: bacground .5s ease;
+    &:hover {
+      background: rgb(221, 126, 18);
+      color: aliceblue;
+    }
+  }
+
+  &__img {
+    flex: 0 1 50%;
+  }
+}
+.container {
+}
+
+
+/*---- главный экран ----*/
+
+.main {
+}
+
+.company-news {
+
+		&__tite {
+		}
+}
+
+@import '_slider';
+
+.main {
+}
+.wrapper {
+  padding-top: 2em;
+  display: flex;
+}
+
+.filters {
+    width: 20%;
+    padding: 0 1.2em;
+		&__clear-button {
+      width: 100%;
+      border: 1px solid #8b8b8b;
+      padding: .5em 0;
+		}
+
+		&__price-filter {
+      padding-top: 1em;
+      margin-bottom: .5em;      
+		}
+
+		&__header {     
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: .2em;
+      cursor: pointer;
+		}
+
+    &__icon {
+      width: 20px;
+      transform: rotate(-90deg);  
+      transition: all 2s ease;
+      &.active {
+        transform: rotate(-180deg);
+      }
+    }
+
+		&__title {
+      font-size: 18px;
+		}
+
+		&__body {      
+      display: none;
+      transition: all .5s ease;
+      &.active {
+        display: block;
+      }
+      & p {
+        margin-bottom: .5em;
+        &:last-child {
+          margin: 0;
+        }
+      }
+		}
+
+    &__input {
+      
+		}
+
+		&__filter {
+      margin-bottom: .5em;
+      & :last-child {
+        margin: 0;
+      }
+		}
+
+		&__checkbox {
+		}
+}
+
+.input {
+  width: 100%;
+  border: 1px solid #8b8b8b;
+  padding: .3em .5em;
+}
+
+.catalog {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+		&__cart {
+      flex: 0 1 30%;
+      margin-bottom: 2em;  
+      &:last-child {
+        margin: 0;
+      } 
+		}
+}
+.cart {
+  padding: 1em;
+  border: 1px solid #8b8b8b;
+		&__img {
+      width: 100%;
+		}
+
+		&__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+		}
+
+    &__body {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 1em;
+    }
+
+		&__title {
+      font-size: 18px;
+      font-weight: normal;
+		}
+
+    &__availability {
+      padding: 0.1em 0.6em;
+      color: aliceblue;
+      background: rgb(3, 156, 3);
+    }
+
+		&__price {
+      font-weight: 900;
+      font-size: 20px;
+		}
+
+		&__button {
+      color: #000;
+      text-decoration: none;
+      border: 1px solid #8b8b8b;
+      padding: .3em 1em;
+      transition: all .4s ease;
+      &:hover {
+        background: $primary-color;
+        color: aliceblue;
+      }
+		}
+}
+
+/*---- Контакты ----*/
+
+.contacts-wrapper {
+  padding-top: 1em;
+  display: flex;
+}
+
+.contacts-title {
+  padding-top: 1em;
+  font-size: 32px;
+}
+
+.map {
+}
+.contacts {
+
+		&__wrapper {
+      margin-left: 2em;
+		}
+
+		&__item {
+      margin-bottom: 1.5em;
+      &:last-child {
+        margin: 0;
+      }
+		}
+
+		&__text {
+      color: #575757;
+      text-decoration: none;
+		}
+
+		&__title {
+      font-size: 18px;
+		}
+}
+
+/*---- Контакты ----*/
+
+
+
+
+

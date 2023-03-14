@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="..//css/main.css">
+  <title>Каталог</title>
+</head>
+<body>  
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__logo">
+          <a href="..//index.html">LOGO</a>        
+        </div>
+        <nav class="header__navigation navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item"> 
+              <a href="about.html">О нас</a> 
+            </li>
+            <li class="navigation__item"> 
+              <a href="#">Каталог</a> 
+            </li>
+            <li class="navigation__item"> 
+              <a href="contacts.html">Где нас найти?</a> 
+            </li>
+          </ul>
+        </nav>
+        <div class="header__login">
+          <a href="/" class="header__login-link">login</a>
+        </div>
+      </div>
+      
+    </header>
+    <main class="main">      
+      <div class="wrapper">        
+        <aside class="filters">
+          <button class="filters__clear-button">Очистить фильтры</button>
+          <div class="filters__price-filter">
+            <div class="filters__header">
+              <h4 class="filters__title">Цена</h4>
+              <img src="..//img/icons/free-icon-up-arrow-angle-54817.png" alt="галочка" class="filters__icon">
+            </div>
+            <div class="filters__body">
+              <p>
+                <label for="start-price-input">От:</label>
+                <input placeholder="5000" class="filters__input input" id="start-price-input" type="text">
+              </p>
+              <p>
+                <label for="end-price-input">До:</label>
+                <input placeholder="15000" class="filters__input input" id="end-price-input" type="text">
+              </p>          
+            </div> 
+          </div>
+          <div class="filters__filter">
+            <div class="filters__header">
+              <h4 class="filters__title">Цвет</h4>
+              <img src="..//img/icons/free-icon-up-arrow-angle-54817.png" alt="галочка" class="filters__icon">
+            </div>
+            <div class="filters__body">
+              <div class="filters__filter">
+                <input class="filters__checkbox" type="checkbox" name="fillters__checkbox" id="fillters__checkbox">
+                <label for="filters__checkbox">Красный</label>
+              </div>   
+            </div> 
+          </div>      
+          <div class="filters__filter">
+            <div class="filters__header">
+              <h4 class="filters__title">Категория</h4>
+              <img src="..//img/icons/free-icon-up-arrow-angle-54817.png" alt="галочка" class="filters__icon">
+            </div>
+            <div class="filters__body">
+              <div class="filters__filter">
+                <input class="filters__checkbox" type="checkbox" name="fillters__checkbox" id="fillters__checkbox">
+                <label for="filters__checkbox">Струные</label>
+              </div>   
+            </div> 
+          </div>      
+        </aside>        
+        <section class="catalog">          
+          <div class="catalog__cart cart">
+            <img src="..//img/61e3012c9fbb2126150a65217989ac40.jpeg" alt="" class="cart__img">
+            <div class="cart__header">
+              <h4 class="cart__title">Гитара</h4>
+              <p class="cart__availability">В наличи</p>
+            </div> 
+            <div class="cart__body">
+              <p class="cart__price">3500р</p>
+              <button href="" class="cart__button">Купить</button> 
+            </div>
+            
+          </div>
+          
+        </section>
+      </div>  
+    </main>
+    <script src="..//js/index.js"></script>
+</body>
+</html>
